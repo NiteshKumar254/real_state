@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #123B68;
+  --color-primary-hover: #0B2C50;
+  --color-accent: #00A6A0;
+  --color-accent-hover: #008B86;
+  --color-background: #F3F8FC;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #DDEBF3;
+  --color-heading: #142D46;
+  --color-body: #526579;
+  --color-muted: #718396;
+  --color-border: #D6E3EC;
+  --color-footer: #0B2540;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-body);
+    @apply font-sans overflow-x-hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-heading);
+    font-family: "Playfair Display", Georgia, serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B2540;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00A6A0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #008B86;
+}
+
+/* Glass styling tokens for construction overlays */
+.royal-glass {
+  background: rgba(18, 59, 104, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.ice-card {
+  background: #FFFFFF;
+  border: 1px solid #D6E3EC;
+  box-shadow: 0 10px 30px -10px rgba(18, 59, 104, 0.08);
+}
+
+/* Smooth Canvas Rendering */
+canvas {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Ensure no horizontal scrolling */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
