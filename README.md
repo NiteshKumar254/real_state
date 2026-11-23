@@ -186,3 +186,5 @@ Edit `src/data/properties.js`:
 - [x] React Hook Form validation with WhatsApp handoff
 - [x] Floating contact widget & mobile responsive navbar
 - [x] `npm run build` succeeds with 0 errors
+#   r e a l _ s t a t e  
+ 
