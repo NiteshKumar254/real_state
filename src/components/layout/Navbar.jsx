@@ -642,7 +642,7 @@ export default function Navbar() {
                   `relative px-3.5 py-2 text-xs font-semibold uppercase tracking-wider transition-colors duration-100 group ${isActive
                     ? 'text-teal'
                     : isTransparent
-                      ? 'text-blue-100/90 hover:text-white'
+                      ? 'text-darkheading hover:text-royal'
                       : 'text-darkheading hover:text-royal'
                   }`
                 }
