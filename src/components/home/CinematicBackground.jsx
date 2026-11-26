@@ -78,7 +78,7 @@ export default function CinematicBackground() {
         alt="Aurelia Estate Prime Residential Land"
         fetchPriority="high"
         loading="eager"
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        className="absolute inset-0 w-full h-full object-cover object-center max-md:object-[50%_35%]"
       />
 
       {/* 2. CONSTRUCTION ANIMATION CANVAS */}

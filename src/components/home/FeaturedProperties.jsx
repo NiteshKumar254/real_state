@@ -809,14 +809,14 @@ export default function FeaturedProperties() {
         rounded-t-[28px]
         border-t border-[#D6E3EC]
         bg-[#F3F8FC]
-        py-14 sm:py-16 lg:py-20
+        py-14 sm:py-16 lg:py-20 max-md:py-10
         text-[#142D46]
         md:rounded-t-[40px]
       "
     >
-      <div className="relative mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
+      <div className="relative mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12 max-md:px-4">
         {/* SECTION HEADER */}
-        <div className="mb-8 flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
+        <div className="mb-8 max-md:mb-6 flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
           <div className="max-w-3xl">
             <div className="mb-3 flex items-center gap-3">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#008B86]">
@@ -826,11 +826,11 @@ export default function FeaturedProperties() {
               <span className="h-px w-12 bg-[#00A6A0]" />
             </div>
 
-            <h2 className="font-serif text-3xl font-bold leading-tight text-[#123B68] sm:text-4xl lg:text-[42px]">
+            <h2 className="font-serif text-3xl font-bold leading-tight text-[#123B68] sm:text-4xl lg:text-[42px] max-md:text-[26px]">
               Explore Our Premium Properties
             </h2>
 
-            <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#526579] sm:text-base">
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#526579] sm:text-base max-md:text-[14px]">
               Discover thoughtfully curated residences and
               commercial spaces designed for exceptional living.
             </p>
@@ -839,9 +839,9 @@ export default function FeaturedProperties() {
           <Link
             to="/properties"
             className="
-              inline-flex w-fit shrink-0 items-center gap-2
+              inline-flex w-fit shrink-0 items-center justify-center gap-2
               rounded-xl border border-[#D6E3EC]
-              bg-white px-5 py-3
+              bg-white px-5 py-3 max-md:h-12 max-md:min-h-[48px] max-md:w-full
               text-sm font-semibold text-[#123B68]
               transition-all duration-300
               hover:border-[#00A6A0]
@@ -861,7 +861,7 @@ export default function FeaturedProperties() {
         {/* CATEGORY FILTERS */}
         <div
           className="
-            mb-7 flex flex-wrap items-center gap-2
+            mb-7 flex flex-wrap max-md:flex-nowrap max-md:overflow-x-auto max-md:snap-x max-md:pb-2 max-md:[scrollbar-width:none] max-md:[&::-webkit-scrollbar]:hidden max-md:min-w-0 max-md:max-w-full items-center gap-2
           "
           role="group"
           aria-label="Filter featured properties"
@@ -879,7 +879,7 @@ export default function FeaturedProperties() {
                 className={`
                   inline-flex items-center gap-2
                   rounded-full border
-                  px-4 py-2.5
+                  px-4 py-2.5 max-md:shrink-0 max-md:snap-start max-md:min-h-[44px] max-md:h-11 max-md:text-[14px]
                   text-xs font-semibold
                   transition-all duration-300
                   sm:text-sm
@@ -939,7 +939,7 @@ export default function FeaturedProperties() {
                 key={property.id ?? property.slug}
                 className="
                   min-w-0 shrink-0 snap-start
-                  w-[calc(100%-8px)]
+                  w-[calc(100%-8px)] max-md:w-[90%]
                   lg:w-[calc((100%-24px)/2)]
                 "
               >

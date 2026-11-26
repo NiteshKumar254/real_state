@@ -188,7 +188,7 @@ export default function HeroEnquiryForm() {
         ease: 'easeOut',
         delay: shouldReduceMotion ? 0 : 0.3
       }}
-      className="w-full max-w-[420px] mx-auto lg:mx-0"
+      className="w-full max-w-[420px] max-md:max-w-full mx-auto lg:mx-0 max-md:mt-4"
     >
       {/* INNER WRAPPER: Subtle float animation (y: 0 -> -5px -> 0) */}
       <motion.div
@@ -220,10 +220,10 @@ export default function HeroEnquiryForm() {
         }}
         className="
           relative isolate overflow-hidden
-          w-full rounded-3xl
+          w-full rounded-3xl max-md:rounded-2xl
           bg-white/80 backdrop-blur-xl
           border border-white/40
-          p-5 sm:p-6
+          p-5 sm:p-6 max-md:p-4
           shadow-[0_20px_50px_rgba(11,37,64,0.22)]
           text-darkheading
           transition-colors duration-300
@@ -236,11 +236,11 @@ export default function HeroEnquiryForm() {
               <CheckCircle2 className="w-6 h-6 sm:w-7 sm:h-7 text-teal" />
             </div>
 
-            <h3 className="text-lg sm:text-xl font-serif font-bold text-darkheading mb-1.5 leading-snug">
+            <h3 className="text-lg sm:text-xl max-md:text-[19px] font-serif font-bold text-darkheading mb-1.5 leading-snug">
               Enquiry Formatted & Ready
             </h3>
 
-            <p className="text-bodytext text-xs sm:text-[13px] leading-relaxed mb-5 max-w-xs mx-auto">
+            <p className="text-bodytext text-xs sm:text-[13px] max-md:text-[13px] leading-relaxed mb-5 max-w-xs mx-auto">
               Your details have been pre-filled for our private client desk. You can send directly via WhatsApp or Email:
             </p>
 
@@ -249,7 +249,7 @@ export default function HeroEnquiryForm() {
                 href={submissionResult.waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-xs sm:text-sm shadow-md transition-all hover:scale-[1.01]"
+                className="inline-flex items-center justify-center gap-2 w-full py-2.5 max-md:h-12 max-md:min-h-[48px] max-md:text-[15px] px-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-xs sm:text-sm shadow-md transition-all hover:scale-[1.01]"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Send via WhatsApp</span>
@@ -257,7 +257,7 @@ export default function HeroEnquiryForm() {
 
               <a
                 href={submissionResult.mailUrl}
-                className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-royal hover:bg-royal-dark text-white font-semibold text-xs sm:text-sm shadow-md transition-all hover:scale-[1.01]"
+                className="inline-flex items-center justify-center gap-2 w-full py-2.5 max-md:h-12 max-md:min-h-[48px] max-md:text-[15px] px-4 rounded-xl bg-royal hover:bg-royal-dark text-white font-semibold text-xs sm:text-sm shadow-md transition-all hover:scale-[1.01]"
               >
                 <Mail className="w-4 h-4" />
                 <span>Send via Email</span>
@@ -267,7 +267,7 @@ export default function HeroEnquiryForm() {
             <button
               type="button"
               onClick={handleResetForm}
-              className="inline-flex items-center gap-1.5 text-xs font-medium text-mutedtext hover:text-teal transition-colors underline underline-offset-4"
+              className="inline-flex items-center gap-1.5 text-xs max-md:text-[13px] max-md:min-h-[44px] font-medium text-mutedtext hover:text-teal transition-colors underline underline-offset-4"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>Submit Another Enquiry</span>
@@ -278,10 +278,10 @@ export default function HeroEnquiryForm() {
           <form onSubmit={handleSubmit} noValidate className="space-y-3 sm:space-y-3.5">
             {/* Header */}
             <div className="mb-1 sm:mb-2 text-left">
-              <h3 className="text-lg sm:text-xl font-serif font-bold text-royal-deep tracking-tight leading-tight">
+              <h3 className="text-lg sm:text-xl max-md:text-[20px] font-serif font-bold text-royal-deep tracking-tight leading-tight">
                 Find Your Dream Property
               </h3>
-              <p className="text-bodytext text-xs leading-relaxed mt-1">
+              <p className="text-bodytext text-xs max-md:text-[13px] leading-relaxed mt-1">
                 Share your requirements. Our property experts will get in touch with you.
               </p>
             </div>
@@ -318,7 +318,7 @@ export default function HeroEnquiryForm() {
                   aria-invalid={!!errors.fullName}
                   aria-describedby={errors.fullName ? 'hero-fullName-error' : undefined}
                   className={`
-                    w-full h-11 pl-10 pr-3.5 rounded-xl text-base sm:text-sm text-darkheading font-medium
+                    w-full h-11 max-md:h-12 max-md:min-h-[48px] pl-10 pr-3.5 rounded-xl text-base sm:text-sm max-md:text-[16px] text-darkheading font-medium
                     bg-white/60 placeholder:text-slate-500
                     border ${errors.fullName ? 'border-rose-400 focus:border-rose-500 focus:ring-rose-200' : 'border-ice-border hover:border-teal/50 focus:border-teal focus:ring-teal/20'}
                     focus:outline-none focus:ring-2 focus:bg-white transition-all
@@ -326,7 +326,7 @@ export default function HeroEnquiryForm() {
                 />
               </div>
               {errors.fullName && (
-                <p id="hero-fullName-error" role="alert" className="text-rose-600 text-[11px] mt-1 pl-1">
+                <p id="hero-fullName-error" role="alert" className="text-rose-600 text-[11px] max-md:text-[12px] mt-1 pl-1">
                   {errors.fullName}
                 </p>
               )}
@@ -353,7 +353,7 @@ export default function HeroEnquiryForm() {
                   aria-invalid={!!errors.phone}
                   aria-describedby={errors.phone ? 'hero-phone-error' : undefined}
                   className={`
-                    w-full h-11 pl-10 pr-3.5 rounded-xl text-base sm:text-sm text-darkheading font-medium
+                    w-full h-11 max-md:h-12 max-md:min-h-[48px] pl-10 pr-3.5 rounded-xl text-base sm:text-sm max-md:text-[16px] text-darkheading font-medium
                     bg-white/60 placeholder:text-slate-500
                     border ${errors.phone ? 'border-rose-400 focus:border-rose-500 focus:ring-rose-200' : 'border-ice-border hover:border-teal/50 focus:border-teal focus:ring-teal/20'}
                     focus:outline-none focus:ring-2 focus:bg-white transition-all
@@ -361,7 +361,7 @@ export default function HeroEnquiryForm() {
                 />
               </div>
               {errors.phone && (
-                <p id="hero-phone-error" role="alert" className="text-rose-600 text-[11px] mt-1 pl-1">
+                <p id="hero-phone-error" role="alert" className="text-rose-600 text-[11px] max-md:text-[12px] mt-1 pl-1">
                   {errors.phone}
                 </p>
               )}
@@ -387,7 +387,7 @@ export default function HeroEnquiryForm() {
                   aria-invalid={!!errors.email}
                   aria-describedby={errors.email ? 'hero-email-error' : undefined}
                   className={`
-                    w-full h-11 pl-10 pr-3.5 rounded-xl text-base sm:text-sm text-darkheading font-medium
+                    w-full h-11 max-md:h-12 max-md:min-h-[48px] pl-10 pr-3.5 rounded-xl text-base sm:text-sm max-md:text-[16px] text-darkheading font-medium
                     bg-white/60 placeholder:text-slate-500
                     border ${errors.email ? 'border-rose-400 focus:border-rose-500 focus:ring-rose-200' : 'border-ice-border hover:border-teal/50 focus:border-teal focus:ring-teal/20'}
                     focus:outline-none focus:ring-2 focus:bg-white transition-all
@@ -395,7 +395,7 @@ export default function HeroEnquiryForm() {
                 />
               </div>
               {errors.email && (
-                <p id="hero-email-error" role="alert" className="text-rose-600 text-[11px] mt-1 pl-1">
+                <p id="hero-email-error" role="alert" className="text-rose-600 text-[11px] max-md:text-[12px] mt-1 pl-1">
                   {errors.email}
                 </p>
               )}
@@ -419,7 +419,7 @@ export default function HeroEnquiryForm() {
                   aria-invalid={!!errors.interestedIn}
                   aria-describedby={errors.interestedIn ? 'hero-interestedIn-error' : undefined}
                   className={`
-                    w-full h-11 pl-10 pr-8 rounded-xl text-base sm:text-sm text-darkheading font-medium
+                    w-full h-11 max-md:h-12 max-md:min-h-[48px] pl-10 pr-8 rounded-xl text-base sm:text-sm max-md:text-[16px] text-darkheading font-medium
                     bg-white/60 appearance-none cursor-pointer
                     border ${errors.interestedIn ? 'border-rose-400 focus:border-rose-500 focus:ring-rose-200' : 'border-ice-border hover:border-teal/50 focus:border-teal focus:ring-teal/20'}
                     focus:outline-none focus:ring-2 focus:bg-white transition-all
@@ -441,7 +441,7 @@ export default function HeroEnquiryForm() {
                 </div>
               </div>
               {errors.interestedIn && (
-                <p id="hero-interestedIn-error" role="alert" className="text-rose-600 text-[11px] mt-1 pl-1">
+                <p id="hero-interestedIn-error" role="alert" className="text-rose-600 text-[11px] max-md:text-[12px] mt-1 pl-1">
                   {errors.interestedIn}
                 </p>
               )}
@@ -460,7 +460,7 @@ export default function HeroEnquiryForm() {
                 value={formData.requirements}
                 onChange={handleChange}
                 className="
-                  w-full px-3.5 py-2.5 rounded-xl text-base sm:text-sm text-darkheading font-medium
+                  w-full px-3.5 py-2.5 rounded-xl text-base sm:text-sm max-md:text-[16px] text-darkheading font-medium
                   bg-white/60 placeholder:text-slate-500 resize-none
                   border border-ice-border hover:border-teal/50
                   focus:border-teal focus:ring-2 focus:ring-teal/20 focus:outline-none focus:bg-white
@@ -474,10 +474,10 @@ export default function HeroEnquiryForm() {
               type="submit"
               disabled={isSubmitting}
               className="
-                w-full h-11 sm:h-11 mt-1
+                w-full h-11 sm:h-11 max-md:h-12 max-md:min-h-[48px] mt-1
                 inline-flex items-center justify-center gap-2
                 rounded-xl bg-teal hover:bg-teal-hover active:bg-teal-dark
-                text-white font-semibold text-xs sm:text-sm tracking-wide
+                text-white font-semibold text-xs sm:text-sm max-md:text-[15px] tracking-wide
                 shadow-md shadow-teal/25 hover:shadow-lg hover:shadow-teal/30
                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2
                 transition-all duration-300
@@ -495,7 +495,7 @@ export default function HeroEnquiryForm() {
             </button>
 
             {/* Security Assurance */}
-            <div className="flex items-center justify-center gap-1.5 pt-1 text-mutedtext text-[11px]">
+            <div className="flex items-center justify-center gap-1.5 pt-1 text-mutedtext text-[11px] max-md:text-[12px]">
               <ShieldCheck className="w-3.5 h-3.5 text-teal shrink-0" />
               <span>Your information is safe and secure.</span>
             </div>
