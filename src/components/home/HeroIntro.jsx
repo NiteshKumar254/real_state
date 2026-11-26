@@ -1,51 +1,61 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowDown, ArrowUpRight, Compass, ShieldCheck } from 'lucide-react';
+import HeroEnquiryForm from './HeroEnquiryForm';
 
 /**
  * HeroIntro
- * Foreground text and CTAs for the initial hero screen:
+ * Foreground content for the initial hero screen:
+ * - Left: Headline, description, and CTAs (100% preserved character-for-character)
+ * - Right: Floating Glassmorphic Lead Generation Form (HeroEnquiryForm)
+ * - Bottom Bar: Scroll Indicator ("SCROLL TO DISCOVER") and RERA Certification badge
  * - 100% crystal-clear background: ZERO full-screen or section-level dark overlays or blurs.
- * - Razor-sharp typography with refined text drop-shadows for effortless readability over bright land/sky.
- * - Royal Blue + Teal luxury branding.
  */
 export default function HeroIntro() {
   return (
-    <section className="relative w-full min-h-[100svh] flex flex-col justify-between pt-28 pb-12 px-6 sm:px-8 lg:px-12 text-white">
+    <section className="relative w-full min-h-[100svh] flex flex-col justify-between pt-24 sm:pt-28 pb-8 sm:pb-12 px-6 sm:px-8 lg:px-12 xl:px-16 text-white">
       {/* Top spacing */}
-      <div className="h-4" />
+      <div className="h-2 sm:h-4" />
 
-      {/* Main Hero Headline & CTAs (Left-aligned, open layout with zero dark box/blur overlay) */}
-      <div className="max-w-2xl animate-in fade-in slide-in-from-bottom-6 duration-700">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-royal-deep/80 backdrop-blur-md border border-white/20 text-teal text-[11px] sm:text-xs font-semibold tracking-widest uppercase mb-4 sm:mb-5 shadow-lg">
-          <Compass className="w-3.5 h-3.5 text-teal" />
-          <span>THE ART OF BUILDING</span>
+      {/* Main Content Area: Left Headline/CTAs + Right Floating Enquiry Form */}
+      <div className="w-full my-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16 py-4">
+        {/* Left Hero Content (Preserved exactly as requested) */}
+        <div className="max-w-2xl w-full animate-in fade-in slide-in-from-bottom-6 duration-700">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-royal-deep/80 backdrop-blur-md border border-white/20 text-teal text-[11px] sm:text-xs font-semibold tracking-widest uppercase mb-4 sm:mb-5 shadow-lg">
+            <Compass className="w-3.5 h-3.5 text-teal" />
+            <span>THE ART OF BUILDING</span>
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white tracking-tight leading-[1.1] mb-5 drop-shadow-[0_3px_12px_rgba(11,37,64,0.95)]">
+            From Vision <br />
+            <span className="italic font-normal text-teal drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">to Reality.</span>
+          </h1>
+
+          <p className="text-base sm:text-lg text-white font-medium leading-relaxed mb-7 max-w-lg drop-shadow-[0_2px_8px_rgba(11,37,64,0.95)]">
+            Transforming land into extraordinary living spaces.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-3.5">
+            <Link
+              to="/properties"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-teal text-white font-semibold text-xs sm:text-sm hover:bg-teal-hover transition-all duration-300 shadow-xl shadow-teal/35 hover:scale-105"
+            >
+              <span>Explore Properties</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
+
+            <Link
+              to="/enquire"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-royal-deep/85 backdrop-blur-md border border-white/30 text-white font-medium text-xs sm:text-sm hover:bg-royal transition-all duration-300 shadow-lg"
+            >
+              <span>Enquire Now</span>
+            </Link>
+          </div>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white tracking-tight leading-[1.1] mb-5 drop-shadow-[0_3px_12px_rgba(11,37,64,0.95)]">
-          From Vision <br />
-          <span className="italic font-normal text-teal drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">to Reality.</span>
-        </h1>
-
-        <p className="text-base sm:text-lg text-white font-medium leading-relaxed mb-7 max-w-lg drop-shadow-[0_2px_8px_rgba(11,37,64,0.95)]">
-          Transforming land into extraordinary living spaces.
-        </p>
-
-        <div className="flex flex-wrap items-center gap-3.5">
-          <Link
-            to="/properties"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-teal text-white font-semibold text-xs sm:text-sm hover:bg-teal-hover transition-all duration-300 shadow-xl shadow-teal/35 hover:scale-105"
-          >
-            <span>Explore Properties</span>
-            <ArrowUpRight className="w-4 h-4" />
-          </Link>
-
-          <Link
-            to="/enquire"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-royal-deep/85 backdrop-blur-md border border-white/30 text-white font-medium text-xs sm:text-sm hover:bg-royal transition-all duration-300 shadow-lg"
-          >
-            <span>Enquire Now</span>
-          </Link>
+        {/* Right Floating Enquiry Form */}
+        <div className="w-full lg:w-auto flex justify-center lg:justify-end shrink-0">
+          <HeroEnquiryForm />
         </div>
       </div>
 

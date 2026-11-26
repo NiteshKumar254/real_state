@@ -3,11 +3,10 @@ import React from 'react';
 /**
  * PageHero
  * Modern, Centered, Editorial Luxury Page Hero:
- * - Center-aligned eyebrow, heading, and subtitle
- * - Visible breadcrumb trails removed for clean, minimal architectural elegance
- * - Compact, balanced height (~300-360px on desktop) accounting for navbar clearance
- * - Crystal-clear, recognizable architectural background photography
- * - Subtle centered contrast protection without making the image dark or murky
+ * - Center-aligned eyebrow, heading, and subtitle (horizontal & vertical flex centering)
+ * - 1.3x scaled height: ~390px mobile, ~440px tablet, ~500px desktop
+ * - Crystal-clear architectural background image with natural colors and details
+ * - Proportional ~35-45% Royal Blue overlay protecting crisp contrast without darkening the image
  */
 export default function PageHero({
   eyebrow,
@@ -18,18 +17,18 @@ export default function PageHero({
   breadcrumbItems = []
 }) {
   return (
-    <div className="relative pt-28 pb-12 sm:pt-32 sm:pb-14 lg:pt-34 lg:pb-16 bg-royal-deep overflow-hidden border-b border-white/10">
-      {/* 1. ARCHITECTURAL BACKGROUND (Visible, sharp, recognizable) */}
+    <div className="relative flex flex-col justify-center items-center min-h-[390px] sm:min-h-[440px] lg:min-h-[500px] pt-24 pb-12 sm:pt-28 sm:pb-14 lg:pt-32 lg:pb-16 bg-royal-deep overflow-hidden border-b border-white/10">
+      {/* 1. ARCHITECTURAL BACKGROUND (Visible, sharp, natural) */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover object-center opacity-50 scale-100 transition-opacity duration-700"
+          className="w-full h-full object-cover object-center opacity-90 scale-100 transition-opacity duration-700"
         />
 
-        {/* Centered subtle radial & directional gradients to ensure crisp text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-b from-royal-deep/60 via-royal-deep/45 to-royal-deep/70 pointer-events-none" />
-        <div className="absolute inset-0 bg-radial-gradient from-transparent via-royal-deep/20 to-royal-deep/60 pointer-events-none" />
+        {/* Centered subtle directional & radial gradients with reduced 35-45% alpha for bright image visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-royal-deep/45 via-royal-deep/35 to-royal-deep/45 pointer-events-none" />
+        <div className="absolute inset-0 bg-radial-gradient from-transparent via-royal-deep/10 to-royal-deep/25 pointer-events-none" />
       </div>
 
       {/* 2. CENTERED EDITORIAL CONTENT */}
