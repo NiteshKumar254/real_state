@@ -65,10 +65,10 @@ export default function PropertyDetails() {
       />
 
       {/* Main Details Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="py-12 sm:py-16 md:py-20 max-md:py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 max-md:px-4">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-md:gap-8">
             
             {/* Left Content Area (8 cols) */}
             <div className="lg:col-span-8">
@@ -117,7 +117,7 @@ export default function PropertyDetails() {
               </div>
 
               {/* Key Metric Highlights Bar */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 rounded-2xl bg-ice border border-ice-border mb-10">
+              <div className="grid grid-cols-2 sm:grid-cols-4 max-md:grid-cols-2 gap-4 max-md:gap-3 p-6 max-md:p-4 rounded-2xl bg-ice border border-ice-border mb-10 max-md:mb-7">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-teal shadow-sm">
                     <Bed className="w-5 h-5" />

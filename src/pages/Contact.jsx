@@ -52,10 +52,10 @@ export default function Contact() {
         image="/assets/images/hero/contact-hero.jpg"
       />
 
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="py-12 sm:py-16 md:py-20 max-md:py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 max-md:px-4">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 max-md:gap-8">
             
             {/* Left Column: Direct Contact Details & Hours */}
             <div className="lg:col-span-5">
@@ -155,18 +155,18 @@ export default function Contact() {
                     <p className="text-xs text-gray-600 max-w-md mx-auto mb-6">
                       Your message has been formatted. If WhatsApp did not open automatically, click below:
                     </p>
-                    <div className="flex flex-wrap items-center justify-center gap-3">
+                    <div className="flex flex-wrap items-center justify-center gap-3 max-md:flex-col">
                       <a
                         href={submitted.waUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-6 py-3 rounded-full bg-emerald-600 text-white text-xs font-semibold hover:bg-emerald-700 transition-all"
+                        className="px-6 py-3 max-md:w-full max-md:text-center rounded-full bg-emerald-600 text-white text-xs font-semibold hover:bg-emerald-700 transition-all"
                       >
                         Send via WhatsApp
                       </a>
                       <a
                         href={submitted.mailUrl}
-                        className="px-6 py-3 rounded-full bg-royal text-white text-xs font-semibold hover:bg-teal transition-all"
+                        className="px-6 py-3 max-md:w-full max-md:text-center rounded-full bg-royal text-white text-xs font-semibold hover:bg-teal transition-all"
                       >
                         Send via Email
                       </a>
@@ -183,7 +183,7 @@ export default function Contact() {
                           type="text"
                           placeholder="Devraj Roy"
                           {...register('name', { required: 'Name is required' })}
-                          className="w-full px-4 py-3 rounded-xl border border-[#D6E3EC] focus:border-teal focus:ring-2 focus:ring-teal/15 text-sm focus:outline-none transition-all"
+                          className="w-full px-4 py-3 max-md:h-12 max-md:min-h-[48px] max-md:text-[16px] rounded-xl border border-[#D6E3EC] focus:border-teal focus:ring-2 focus:ring-teal/15 text-sm focus:outline-none transition-all"
                         />
                         {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
                       </div>
@@ -196,7 +196,7 @@ export default function Contact() {
                           type="email"
                           placeholder="client@domain.com"
                           {...register('email', { required: 'Email is required' })}
-                          className="w-full px-4 py-3 rounded-xl border border-[#D6E3EC] focus:border-teal focus:ring-2 focus:ring-teal/15 text-sm focus:outline-none transition-all"
+                          className="w-full px-4 py-3 max-md:h-12 max-md:min-h-[48px] max-md:text-[16px] rounded-xl border border-[#D6E3EC] focus:border-teal focus:ring-2 focus:ring-teal/15 text-sm focus:outline-none transition-all"
                         />
                         {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
                       </div>
@@ -211,7 +211,7 @@ export default function Contact() {
                           type="tel"
                           placeholder="+91 98765 43210"
                           {...register('phone', { required: 'Phone number is required' })}
-                          className="w-full px-4 py-3 rounded-xl border border-[#D6E3EC] focus:border-teal focus:ring-2 focus:ring-teal/15 text-sm focus:outline-none transition-all"
+                          className="w-full px-4 py-3 max-md:h-12 max-md:min-h-[48px] max-md:text-[16px] rounded-xl border border-[#D6E3EC] focus:border-teal focus:ring-2 focus:ring-teal/15 text-sm focus:outline-none transition-all"
                         />
                         {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
                       </div>
@@ -224,7 +224,7 @@ export default function Contact() {
                           type="text"
                           placeholder="Penthouse Viewing / Villa Build"
                           {...register('subject')}
-                          className="w-full px-4 py-3 rounded-xl border border-[#D6E3EC] focus:border-teal focus:ring-2 focus:ring-teal/15 text-sm focus:outline-none transition-all"
+                          className="w-full px-4 py-3 max-md:h-12 max-md:min-h-[48px] max-md:text-[16px] rounded-xl border border-[#D6E3EC] focus:border-teal focus:ring-2 focus:ring-teal/15 text-sm focus:outline-none transition-all"
                         />
                       </div>
                     </div>
@@ -237,7 +237,7 @@ export default function Contact() {
                         rows={4}
                         placeholder="Please describe your interest, preferred timelines, or any questions..."
                         {...register('message', { required: 'Message is required' })}
-                        className="w-full px-4 py-3 rounded-xl border border-[#D6E3EC] focus:border-teal focus:ring-2 focus:ring-teal/15 text-sm focus:outline-none transition-all"
+                        className="w-full px-4 py-3 max-md:text-[16px] rounded-xl border border-[#D6E3EC] focus:border-teal focus:ring-2 focus:ring-teal/15 text-sm focus:outline-none transition-all"
                       />
                       {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message.message}</p>}
                     </div>
@@ -245,7 +245,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-royal text-white font-semibold text-xs tracking-wider uppercase hover:bg-teal transition-all duration-300 shadow-md group"
+                      className="w-full inline-flex items-center justify-center gap-2 px-8 py-3.5 max-md:h-12 max-md:min-h-[48px] rounded-full bg-royal text-white font-semibold text-xs tracking-wider uppercase hover:bg-teal transition-all duration-300 shadow-md group"
                     >
                       <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       <span>Dispatch Message via WhatsApp</span>

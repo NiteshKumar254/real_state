@@ -906,11 +906,11 @@ export default function Properties() {
         image="/assets/images/hero/properties-hero.jpg"
       />
 
-      <section className="bg-[#F3F8FC] pb-20 pt-10 sm:pt-14">
-        <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
+      <section className="bg-[#F3F8FC] pb-20 max-md:pb-12 pt-10 sm:pt-14 max-md:pt-6">
+        <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12 max-md:px-4">
 
           {/* INTRO */}
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-5">
+          <div className="mb-8 max-md:mb-5 flex flex-wrap items-end justify-between gap-5 max-md:gap-3">
             <div className="max-w-2xl">
               <div className="mb-2 flex items-center gap-3">
                 <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#008B86]">
@@ -919,11 +919,11 @@ export default function Properties() {
                 <span className="h-px w-10 bg-[#00A6A0]" />
               </div>
 
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#123B68] sm:text-4xl">
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#123B68] sm:text-4xl max-md:text-[26px]">
                 Find Your Signature Sanctuary.
               </h2>
 
-              <p className="mt-2 text-sm leading-relaxed text-[#526579]">
+              <p className="mt-2 text-sm leading-relaxed text-[#526579] max-md:text-[14px]">
                 Discover carefully selected residences, villas,
                 commercial spaces and prime properties.
               </p>
@@ -938,7 +938,7 @@ export default function Properties() {
           </div>
 
           {/* SEARCH & FILTER PANEL */}
-          <div className="mb-7 overflow-hidden rounded-[24px] border border-[#D6E3EC] bg-white shadow-[0_10px_35px_rgba(18,59,104,0.06)]">
+          <div className="mb-7 max-md:mb-5 overflow-hidden rounded-[24px] max-md:rounded-[18px] border border-[#D6E3EC] bg-white shadow-[0_10px_35px_rgba(18,59,104,0.06)]">
 
             <div className="flex items-center justify-between gap-4 bg-[#123B68] px-5 py-4 text-white sm:px-7">
               <div className="flex items-center gap-3">
@@ -960,7 +960,7 @@ export default function Properties() {
                 type="button"
                 onClick={() => setShowMobileFilters((value) => !value)}
                 aria-expanded={showMobileFilters}
-                className="inline-flex items-center gap-2 rounded-full border border-white/25 px-3 py-2 text-xs font-semibold lg:hidden"
+                className="inline-flex items-center gap-2 rounded-full border border-white/25 px-3 py-2 max-md:h-11 max-md:min-h-[44px] text-xs font-semibold lg:hidden"
               >
                 <SlidersHorizontal size={14} />
                 {showMobileFilters ? "Hide Filters" : "Filters"}
@@ -991,8 +991,8 @@ export default function Properties() {
                   placeholder="Search by property name, location or type..."
                   className="
                     w-full rounded-xl border border-[#D6E3EC]
-                    bg-[#F7FAFD] py-3.5 pl-11 pr-4
-                    text-sm text-[#123B68] outline-none
+                    bg-[#F7FAFD] py-3.5 max-md:py-3 max-md:h-12 max-md:min-h-[48px] pl-11 pr-4
+                    text-sm max-md:text-[16px] text-[#123B68] outline-none
                     transition-all duration-300
                     placeholder:text-[#91A1B1]
                     focus:border-[#00A6A0]
@@ -1078,7 +1078,7 @@ export default function Properties() {
 
           {/* CATEGORY PILLS */}
           <div
-            className="mb-6 flex flex-wrap gap-2"
+            className="mb-6 max-md:mb-4 flex flex-nowrap max-md:overflow-x-auto max-md:snap-x max-md:[scrollbar-width:none] max-md:[&::-webkit-scrollbar]:hidden max-md:pb-2 flex-wrap gap-2"
             role="group"
             aria-label="Property categories"
           >
@@ -1093,7 +1093,7 @@ export default function Properties() {
                   onClick={() => changeType(item.value)}
                   aria-pressed={active}
                   className={`
-                    inline-flex items-center gap-2 rounded-full
+                    inline-flex items-center gap-2 rounded-full max-md:shrink-0 max-md:snap-start max-md:min-h-[44px]
                     border px-4 py-2.5 text-xs font-semibold
                     transition-all duration-300
                     focus-visible:outline focus-visible:outline-2
@@ -1140,9 +1140,9 @@ export default function Properties() {
           )}
 
           {/* RESULTS TOOLBAR */}
-          <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-[#D6E3EC] pb-5">
+          <div className="mb-6 max-md:mb-4 flex flex-wrap items-center justify-between gap-4 max-md:gap-3 border-b border-[#D6E3EC] pb-5">
             <div>
-              <h3 className="font-serif text-2xl font-bold text-[#123B68]">
+              <h3 className="font-serif text-2xl max-md:text-[20px] font-bold text-[#123B68]">
                 Available Properties
               </h3>
               <p className="mt-1 text-xs text-[#718396]">
@@ -1152,7 +1152,7 @@ export default function Properties() {
 
             <div className="flex flex-wrap items-center gap-3">
               {/* SORT */}
-              <div className="flex items-center gap-2 rounded-xl border border-[#D6E3EC] bg-white px-3 py-2.5">
+              <div className="flex items-center gap-2 rounded-xl border border-[#D6E3EC] bg-white px-3 py-2.5 max-md:min-h-[44px]">
                 <ArrowUpDown size={15} className="text-[#008B86]" />
 
                 <select
@@ -1176,7 +1176,7 @@ export default function Properties() {
                   aria-pressed={viewMode === "grid"}
                   title="Grid view"
                   className={`
-                    flex h-9 w-9 items-center justify-center rounded-lg
+                    flex h-9 w-9 max-md:h-10 max-md:w-10 items-center justify-center rounded-lg
                     transition-colors
                     ${viewMode === "grid"
                       ? "bg-[#123B68] text-white"
@@ -1194,7 +1194,7 @@ export default function Properties() {
                   aria-pressed={viewMode === "list"}
                   title="List view"
                   className={`
-                    flex h-9 w-9 items-center justify-center rounded-lg
+                    flex h-9 w-9 max-md:h-10 max-md:w-10 items-center justify-center rounded-lg
                     transition-colors
                     ${viewMode === "list"
                       ? "bg-[#123B68] text-white"

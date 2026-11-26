@@ -54,9 +54,9 @@ export default function About() {
       />
 
       {/* Story Narrative */}
-      <section className="py-14 sm:py-18 md:py-20 bg-white relative">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <section className="py-14 sm:py-18 md:py-20 max-md:py-10 bg-white relative">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 max-md:px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 max-md:gap-8 items-center">
             
             <div className="lg:col-span-6">
               <RevealOnScroll>
@@ -94,7 +94,7 @@ export default function About() {
                   We reversed that paradigm. Every Aurelia residence begins with the deep geological integrity of the soil, moving methodically through seismic steel cages, post-tensioned slabs, and finally into the light-filled volumes of modern architecture.
                 </p>
 
-                <div className="grid grid-cols-2 gap-6 pt-6 border-t border-ice-border">
+                <div className="grid grid-cols-2 max-[359px]:grid-cols-1 gap-6 max-md:gap-4 pt-6 border-t border-ice-border">
                   <div>
                     <span className="text-3xl font-serif font-bold text-teal block mb-1">100%</span>
                     <span className="text-xs text-muted font-medium uppercase tracking-wider">RERA Verified Titles</span>
@@ -147,8 +147,8 @@ export default function About() {
       </section>
 
       {/* Core Values */}
-      <section className="py-14 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="py-14 sm:py-16 md:py-20 max-md:py-10 bg-white">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 max-md:px-4">
           <SectionHeading
             eyebrow="Our Guiding Principles"
             title="Core Values That Guide Every Build."
@@ -156,20 +156,20 @@ export default function About() {
             centered={true}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-md:grid-cols-2 max-[359px]:grid-cols-1 gap-8 max-md:gap-4">
             {values.map((val, idx) => {
               const Icon = val.icon;
               return (
                 <RevealOnScroll key={idx} delay={idx * 80}>
-                  <div className="p-8 rounded-3xl bg-ice border border-ice-border hover:border-teal/50 hover:bg-white hover:shadow-luxury transition-all duration-300 h-full flex flex-col justify-between">
+                  <div className="p-8 max-md:p-5 rounded-3xl max-md:rounded-2xl bg-ice border border-ice-border hover:border-teal/50 hover:bg-white hover:shadow-luxury transition-all duration-300 h-full flex flex-col justify-between">
                     <div>
-                      <div className="w-12 h-12 rounded-2xl bg-white text-teal border border-ice-border flex items-center justify-center mb-6 shadow-sm">
-                        <Icon className="w-6 h-6" />
+                      <div className="w-12 h-12 max-md:w-10 max-md:h-10 rounded-2xl bg-white text-teal border border-ice-border flex items-center justify-center mb-6 max-md:mb-4 shadow-sm">
+                        <Icon className="w-6 h-6 max-md:w-5 max-md:h-5" />
                       </div>
-                      <h4 className="text-lg font-serif font-bold text-heading mb-2">
+                      <h4 className="text-lg max-md:text-[16px] font-serif font-bold text-heading mb-2">
                         {val.title}
                       </h4>
-                      <p className="text-xs text-body leading-relaxed">
+                      <p className="text-xs max-md:text-[13px] text-body leading-relaxed">
                         {val.desc}
                       </p>
                     </div>
@@ -182,8 +182,8 @@ export default function About() {
       </section>
 
       {/* Milestones Timeline */}
-      <section className="py-14 sm:py-16 md:py-20 bg-royal text-white">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="py-14 sm:py-16 md:py-20 max-md:py-10 bg-royal text-white">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 max-md:px-4">
           <SectionHeading
             eyebrow="The Journey"
             title="A Decade of Milestones."
@@ -192,17 +192,17 @@ export default function About() {
             centered={true}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-md:grid-cols-2 max-[359px]:grid-cols-1 gap-8 max-md:gap-4">
             {milestones.map((m, idx) => (
               <RevealOnScroll key={idx} delay={idx * 100}>
-                <div className="p-8 rounded-3xl bg-white/10 border border-white/15 hover:border-teal transition-all h-full">
-                  <span className="text-4xl font-serif font-bold text-teal block mb-3">
+                <div className="p-8 max-md:p-5 rounded-3xl max-md:rounded-2xl bg-white/10 border border-white/15 hover:border-teal transition-all h-full">
+                  <span className="text-4xl max-md:text-3xl font-serif font-bold text-teal block mb-3">
                     {m.year}
                   </span>
-                  <h4 className="text-lg font-serif font-semibold text-white mb-2">
+                  <h4 className="text-lg max-md:text-[15px] font-serif font-semibold text-white mb-2">
                     {m.title}
                   </h4>
-                  <p className="text-xs text-gray-200 leading-relaxed">
+                  <p className="text-xs max-md:text-[13px] text-gray-200 leading-relaxed">
                     {m.desc}
                   </p>
                 </div>
@@ -213,8 +213,8 @@ export default function About() {
       </section>
 
       {/* Leadership Preview */}
-      <section className="py-14 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="py-14 sm:py-16 md:py-20 max-md:py-10 bg-white">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 max-md:px-4">
           <SectionHeading
             eyebrow="Bespoke Leadership"
             title="The Custodians of Your Vision."
@@ -222,20 +222,20 @@ export default function About() {
             centered={true}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 max-md:grid-cols-1 gap-8 max-md:gap-4 max-w-5xl mx-auto">
             {team.map((member, idx) => (
               <RevealOnScroll key={idx} delay={idx * 100}>
-                <div className="p-8 rounded-3xl bg-ice border border-ice-border text-center hover:shadow-luxury transition-all">
-                  <div className="w-20 h-20 rounded-full bg-royal text-teal font-serif text-2xl font-bold flex items-center justify-center mx-auto mb-6 border-2 border-teal/40">
+                <div className="p-8 max-md:p-5 rounded-3xl max-md:rounded-2xl bg-ice border border-ice-border text-center hover:shadow-luxury transition-all">
+                  <div className="w-20 h-20 rounded-full bg-royal text-teal font-serif text-2xl font-bold flex items-center justify-center mx-auto mb-6 max-md:mb-4 border-2 border-teal/40">
                     {member.name.split(' ').map(n => n[0]).join('')}
                   </div>
-                  <h4 className="text-lg font-serif font-bold text-heading mb-1">
+                  <h4 className="text-lg max-md:text-[17px] font-serif font-bold text-heading mb-1">
                     {member.name}
                   </h4>
-                  <span className="text-xs text-teal font-semibold uppercase tracking-wider block mb-3">
+                  <span className="text-xs max-md:text-[12px] text-teal font-semibold uppercase tracking-wider block mb-3">
                     {member.role}
                   </span>
-                  <p className="text-xs text-body leading-relaxed">
+                  <p className="text-xs max-md:text-[13px] text-body leading-relaxed">
                     {member.bio}
                   </p>
                 </div>

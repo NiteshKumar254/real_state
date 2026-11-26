@@ -73,8 +73,8 @@ export default function HowWeWork() {
       />
 
       {/* Process Timeline */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="py-12 sm:py-16 md:py-20 max-md:py-8 bg-white">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 max-md:px-4">
           <SectionHeading
             eyebrow="Chronological Pathway"
             title="The 8 Stages of Acquisition."
@@ -82,25 +82,25 @@ export default function HowWeWork() {
             centered={true}
           />
 
-          <div className="relative border-l-2 border-teal/40 ml-4 md:ml-32 pl-6 md:pl-12 space-y-16">
+          <div className="relative border-l-2 border-teal/40 ml-4 md:ml-32 pl-6 md:pl-12 max-md:ml-3 max-md:pl-5 space-y-16 max-md:space-y-10">
             {steps.map((step, idx) => {
               const Icon = step.icon;
               return (
                 <div key={idx} className="relative group">
                   {/* Node Circle */}
-                  <div className="absolute -left-[35px] md:-left-[59px] top-1.5 w-10 h-10 rounded-full bg-royal text-white border-2 border-teal flex items-center justify-center font-bold text-xs shadow-md group-hover:scale-110 group-hover:bg-teal group-hover:text-white transition-all">
+                  <div className="absolute -left-[35px] md:-left-[59px] max-md:-left-[31px] top-1.5 w-10 h-10 max-md:w-8 max-md:h-8 rounded-full bg-royal text-white border-2 border-teal flex items-center justify-center font-bold text-xs shadow-md group-hover:scale-110 group-hover:bg-teal group-hover:text-white transition-all">
                     {step.num}
                   </div>
 
                   {/* Content Box */}
-                  <div className="p-8 rounded-3xl bg-ice border border-ice-border hover:border-teal/50 hover:bg-white hover:shadow-luxury transition-all duration-300">
+                  <div className="p-8 max-md:p-5 rounded-3xl max-md:rounded-2xl bg-ice border border-ice-border hover:border-teal/50 hover:bg-white hover:shadow-luxury transition-all duration-300">
                     <div className="flex items-center gap-3 mb-3">
-                      <Icon className="w-5 h-5 text-teal" />
-                      <h3 className="text-2xl font-serif font-bold text-heading">
+                      <Icon className="w-5 h-5 max-md:w-4 max-md:h-4 text-teal" />
+                      <h3 className="text-2xl max-md:text-[18px] font-serif font-bold text-heading">
                         {step.title}
                       </h3>
                     </div>
-                    <p className="text-body text-sm leading-relaxed max-w-3xl">
+                    <p className="text-body text-sm max-md:text-[14px] leading-relaxed max-w-3xl">
                       {step.desc}
                     </p>
                   </div>
@@ -109,10 +109,10 @@ export default function HowWeWork() {
             })}
           </div>
 
-          <div className="mt-16 text-center">
+          <div className="mt-16 max-md:mt-10 text-center">
             <Link
               to="/enquire"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-teal text-white font-semibold text-sm hover:bg-teal-hover transition-all duration-300 shadow-md group"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 max-md:h-12 max-md:min-h-[48px] max-md:w-full max-md:max-w-sm rounded-full bg-teal text-white font-semibold text-sm hover:bg-teal-hover transition-all duration-300 shadow-md group"
             >
               <span>Schedule Your Step 01 Consultation</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

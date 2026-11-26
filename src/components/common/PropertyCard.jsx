@@ -261,7 +261,7 @@ export default function PropertyCard({ property }) {
         group relative isolate
         flex h-full min-w-0 flex-col
         overflow-hidden
-        rounded-[24px]
+        rounded-[24px] max-md:rounded-[18px]
         border border-[#D6E3EC]
         bg-white
         shadow-[0_5px_22px_rgba(18,59,104,0.06)]
@@ -394,7 +394,7 @@ export default function PropertyCard({ property }) {
         className="
           flex min-w-0 flex-1
           flex-col justify-between
-          p-5 sm:p-6
+          p-5 sm:p-6 max-md:p-4
           md:min-h-[300px]
         "
       >
@@ -434,7 +434,7 @@ export default function PropertyCard({ property }) {
               className="
                 line-clamp-2
                 font-serif
-                text-[21px] font-bold
+                text-[21px] font-bold max-md:text-[18px]
                 leading-[1.25]
                 tracking-tight
                 text-[#142D46]
@@ -460,9 +460,9 @@ export default function PropertyCard({ property }) {
           {/* PROPERTY SPECIFICATIONS */}
           <div
             className="
-              mt-5 flex flex-wrap
+              mt-5 max-md:mt-3 flex flex-wrap
               items-center
-              gap-x-4 gap-y-3
+              gap-x-4 gap-y-3 max-md:gap-x-3 max-md:gap-y-2
               text-[12px] font-medium
               text-[#344F69]
             "
@@ -504,11 +504,11 @@ export default function PropertyCard({ property }) {
         {/* PRICE + CTA */}
         <div
           className="
-            mt-5 flex flex-wrap
+            mt-5 max-md:mt-3 flex flex-wrap
             items-end justify-between
             gap-3
             border-t border-[#D6E3EC]
-            pt-4
+            pt-4 max-md:pt-3
           "
         >
           <div className="min-w-0">
@@ -526,7 +526,7 @@ export default function PropertyCard({ property }) {
             <span
               className="
                 font-serif
-                text-[23px] font-bold
+                text-[23px] max-md:text-[20px] font-bold
                 leading-none
                 text-[#123B68]
               "
@@ -544,7 +544,7 @@ export default function PropertyCard({ property }) {
               gap-1.5
               rounded-xl
               bg-[#123B68]
-              px-4 py-3
+              px-4 py-3 max-md:h-11 max-md:min-h-[44px] max-md:px-5
               text-[12px] font-semibold
               text-white
               shadow-[0_4px_12px_rgba(18,59,104,0.14)]

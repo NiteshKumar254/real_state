@@ -23,16 +23,16 @@ export default function Projects() {
         image="/assets/images/projects/monolith.jpg"
       />
 
-      <section className="py-12 sm:py-16 md:py-20 bg-ice">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="py-12 sm:py-16 md:py-20 max-md:py-8 bg-ice">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 max-md:px-4">
           
           {/* Status Filter Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2.5 mb-10 sm:mb-12">
+          <div className="flex flex-nowrap max-md:overflow-x-auto max-md:snap-x max-md:[scrollbar-width:none] max-md:[&::-webkit-scrollbar]:hidden max-md:pb-2 flex-wrap items-center justify-center gap-2.5 mb-10 sm:mb-12 max-md:mb-8">
             {['All', 'Completed', 'Ongoing', 'Upcoming'].map((status) => (
               <button
                 key={status}
                 onClick={() => setActiveFilter(status)}
-                className={`px-6 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 ${
+                className={`px-6 py-2.5 max-md:shrink-0 max-md:snap-start max-md:min-h-[44px] rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 ${
                   activeFilter === status
                     ? 'bg-royal text-white shadow-md'
                     : 'bg-white text-muted hover:bg-ice border border-ice-border'

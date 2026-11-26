@@ -21,17 +21,17 @@ export default function NotFound() {
         The architectural page you are seeking has been moved, archived, or does not exist.
       </p>
 
-      <div className="flex flex-wrap items-center justify-center gap-4">
+      <div className="flex flex-wrap max-md:flex-col items-center justify-center gap-4 max-md:w-full max-md:max-w-sm max-md:mx-auto">
         <Link
           to="/"
-          className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-teal text-white font-semibold text-xs tracking-wider uppercase hover:bg-teal-hover transition-all shadow-md"
+          className="inline-flex items-center justify-center gap-2 px-8 py-3.5 max-md:w-full max-md:h-12 max-md:min-h-[48px] rounded-full bg-teal text-white font-semibold text-xs tracking-wider uppercase hover:bg-teal-hover transition-all shadow-md"
         >
           <Home className="w-4 h-4" />
           <span>Return Home</span>
         </Link>
         <Link
           to="/properties"
-          className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-white/10 text-white font-medium text-xs tracking-wider uppercase hover:bg-white/20 transition-all border border-white/20"
+          className="inline-flex items-center justify-center gap-2 px-8 py-3.5 max-md:w-full max-md:h-12 max-md:min-h-[48px] rounded-full bg-white/10 text-white font-medium text-xs tracking-wider uppercase hover:bg-white/20 transition-all border border-white/20"
         >
           <span>Explore Properties</span>
           <ArrowUpRight className="w-4 h-4" />

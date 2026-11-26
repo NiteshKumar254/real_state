@@ -13,8 +13,8 @@ export default function TermsConditions() {
         image="/assets/images/hero/about-hero.jpg"
       />
 
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-sm text-gray-700 leading-relaxed space-y-8">
+      <section className="py-12 sm:py-16 max-md:py-8 bg-white">
+        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 max-md:px-4 text-sm max-md:text-[14px] text-gray-700 leading-relaxed space-y-8">
           
           <div className="p-4 rounded-xl bg-ice border border-teal/30 text-xs text-body">
             <strong>Demonstration Notice:</strong> The terms and property data displayed on this website represent a conceptual presentation. Official property acquisitions are governed strictly by physical RERA-compliant Sale &amp; Construction Agreements executed between parties.

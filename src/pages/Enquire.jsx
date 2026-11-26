@@ -19,10 +19,10 @@ export default function Enquire() {
         image="/assets/images/hero/contact-hero.jpg"
       />
 
-      <section className="py-12 sm:py-16 md:py-20 bg-ice">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="py-12 sm:py-16 md:py-20 max-md:py-8 bg-ice">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 max-md:px-4">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-md:gap-8 items-start">
             
             {/* Left Narrative & Trust Metrics (5 cols) */}
             <div className="lg:col-span-5 space-y-8">
